@@ -13,12 +13,6 @@ export default StyleSheet.create({
     paddingTop:20,
     paddingLeft:20,
   },
-  sectionHeadingStyle: {
-    paddingVertical: 10,
-    paddingHorizontal: 5,
-    color: AppColors.textWhite,
-
-  },
   footerContainer: {
     padding: 20,
     backgroundColor: 'transparent',
@@ -36,7 +30,6 @@ export default StyleSheet.create({
     height:AppSizes.screen.height/3,
     paddingTop: 30,
     flexDirection: 'row',
-    
   },
   headerImage:{
     width: AppSizes.screen.width-80,

@@ -2,7 +2,7 @@ import { FETCHING_API, FETCH_API_SUCCESS, FETCH_API_FAILURE } from '../actions/c
 
 
 
-const initialState = {
+export const initialState = {
     items: [],
     isFetching: false,
     error: false,

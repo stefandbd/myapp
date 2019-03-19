@@ -9,6 +9,7 @@ import {chartConfig} from '../../resources/constants';
 import MaterialTabs from 'react-native-material-tabs';
 const screenWidth = Dimensions.get('window').width
 
+
 class StockDetail extends Component {
 static navigationOptions = ({navigation}) => NavigatorStyle.getTitleNameStyle(navigation.state.params.name, navigation);
   constructor (props) {
@@ -22,8 +23,13 @@ setTab = selectedTab => {
   this.setState({ selectedTab });
 };
 
+componentWillUnmount() {
+  console.log("Unmounting Details View...");
+}
+
   render() {
     console.log('details', this.props.navigation.state.params);
+    console.log('navigation ----', this.props.navigation);
     const myArray = [this.props.navigation.state.params.closePrice,
       this.props.navigation.state.params.highPrice,
       this.props.navigation.state.params.lowPrice]
@@ -36,6 +42,7 @@ setTab = selectedTab => {
     const myDate = this.props.navigation.state.params.datetime.slice(0, 10);
     const myTime = this.props.navigation.state.params.datetime.slice(11, 19);
     const signChange = this.props.navigation.state.params.intradayPriceMutation < 0 ? '' : '+';
+
 
     return (
         <ScrollView style={styles.container}>

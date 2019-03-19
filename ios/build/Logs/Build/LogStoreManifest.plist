@@ -6,7 +6,7 @@
 	<integer>9</integer>
 	<key>logs</key>
 	<dict>
-		<key>0634663F-BE2C-432A-B101-9E61B2D168C3</key>
+		<key>31274CA3-0261-4F1A-A492-80C55F7B0F80</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>0634663F-BE2C-432A-B101-9E61B2D168C3.xcactivitylog</string>
+			<string>31274CA3-0261-4F1A-A492-80C55F7B0F80.xcactivitylog</string>
 			<key>highLevelStatus</key>
 			<string>E</string>
 			<key>schemeIdentifier-containerName</key>
@@ -27,13 +27,42 @@
 			<key>signature</key>
 			<string>Building project myapp with scheme myapp and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>573992217.77415001</real>
+			<real>574023838.30806696</real>
 			<key>timeStoppedRecording</key>
-			<real>573992218.86575496</real>
+			<real>574023841.96719003</real>
 			<key>title</key>
 			<string>Building project myapp with scheme myapp and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>0634663F-BE2C-432A-B101-9E61B2D168C3</string>
+			<string>31274CA3-0261-4F1A-A492-80C55F7B0F80</string>
+		</dict>
+		<key>4A6CFCA1-5C6B-4331-A6A8-592F5560F240</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4A6CFCA1-5C6B-4331-A6A8-592F5560F240.xcactivitylog</string>
+			<key>highLevelStatus</key>
+			<string>E</string>
+			<key>schemeIdentifier-containerName</key>
+			<string>myapp project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>myapp</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project myapp with scheme myapp and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>574074279.39376605</real>
+			<key>timeStoppedRecording</key>
+			<real>574074281.49340904</real>
+			<key>title</key>
+			<string>Building project myapp with scheme myapp and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>4A6CFCA1-5C6B-4331-A6A8-592F5560F240</string>
 		</dict>
 	</dict>
 </dict>

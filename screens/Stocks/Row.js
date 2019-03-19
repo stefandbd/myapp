@@ -12,31 +12,22 @@ class Row extends Component {
 
   render() {
     const colorChange = this.props.data.intradayPriceMutation < 0 ? styles.lessGain : styles.moreGain;
-    // const navigation = this.props.navigation;
     const resetAction = StackActions.reset({
       index: 0,
-      actions: [NavigationActions.navigate({routeName: 'StockDetail',params: {
-        name: this.props.data.name,
-        closePrice: this.props.data.priceDetails.closePrice.value,
-        highPrice: this.props.data.priceDetails.highPrice.value,
-        lowPrice: this.props.data.priceDetails.lowPrice.value,
-        currentPrice: this.props.data.currentPrice.value,
-        intradayPriceMutation: this.props.data.intradayPriceMutation,
-        // openPrice: this.props.data.priceDetails.openPrice.value,
-        datetime: this.props.data.datetime
+      actions: [NavigationActions.navigate({routeName: 'StockDetail',
+      params: {
+              name: this.props.data.name,
+              closePrice: this.props.data.priceDetails.closePrice.value,
+              highPrice: this.props.data.priceDetails.highPrice.value,
+              lowPrice: this.props.data.priceDetails.lowPrice.value,
+              currentPrice: this.props.data.currentPrice.value,
+              intradayPriceMutation: this.props.data.intradayPriceMutation,
+              datetime: this.props.data.datetime
     }})],
     });
     return (
           <TouchableOpacity style={styles.flatview} onPress={() => {
             this.props.navigation.dispatch(resetAction);
-            // navigation.navigate('StockDetail',{
-            //         name: this.props.data.name,
-            //         closePrice: this.props.data.priceDetails.closePrice.value,
-            //         highPrice: this.props.data.priceDetails.highPrice.value,
-            //         lowPrice: this.props.data.priceDetails.lowPrice.value,
-            //         openPrice: this.props.data.priceDetails.openPrice.value,
-            //         datetime: this.props.data.datetime
-            //     })
             }}>
               <View style={styles.rowContainer}>
                 <TextAvatar

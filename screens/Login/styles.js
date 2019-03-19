@@ -5,12 +5,7 @@ import {Fonts} from '../../assets/fonts';
 
 
 export default StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#1D232F'
-    },
+
     mainContainer:{
         padding: 20,
         backgroundColor: 'rgba(0,0,0,0.4)',
@@ -113,7 +108,6 @@ export default StyleSheet.create({
          fontSize: 22
        },
        welcomeContainer:{
-        //  marginTop: 100,
          textAlign:'center',
          justifyContent: 'center',
          alignItems: 'center'

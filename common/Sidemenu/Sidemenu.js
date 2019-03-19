@@ -45,7 +45,7 @@ static navigationOptions = {headerStyle: {height: 0, width: 0}};
                 <View style={styles.rowIcon}>
                   <Icon name='cube' size={20} color="#ffe2e2" />
                 </View>
-                <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Buttons')}>Stocks</Text>
+                <Text style={styles.navItemStyle} onPress={this.navigateToScreen('Stocks')}>Stocks</Text>
                 <View style={styles.imageContainer}>
                   <Image style={{width:24, height:24}} source={arrow} />
                 </View>

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Platform, Text, View, TextInput, ImageBackground,
    Button, KeyboardAvoidingView, NetInfo } from 'react-native';
 import styles from './styles';
-import Loader from '../../common/Loader/Loader';
 import { connect } from 'react-redux';
 import { login } from '../../redux/actions/auth';
 import CustomButton from '../../common/Buttons/CustomButton';
@@ -17,7 +16,6 @@ class Login extends Component {
     this.state = {
     username: '',
     password: '',
-    loading: false,
     isConnected: true,
   }
 }
@@ -84,68 +82,58 @@ userLogin (e) {
           keyboardVerticalOffset={Platform.select({ios: 60, android: 0})}
           enabled
           style={{flex:1}}>
-
- <View style={styles.mainContainer}>
-      <Loader
-          loading={this.state.loading} />
-      <View style={styles.loginView}>
-      <Text 
-        style={styles.loginTitle}>
-        LOGIN
-      </Text>
-      </View>
-  <View style={styles.inputView}>
-      <TextInput
-        placeholderTextColor='#fff'
-        style={styles.textInput}
-        ref={component => this._username = component}
-        placeholder={'Username'} 
-        onChangeText={(text) => this.setState({ username: text })} 
-        onFocus={this.clearUsername}
-        autoCapitalize={'none'}
-      />
-      </View>
-      <View style={styles.inputView}>
-      <TextInput 
-        placeholderTextColor='#fff'
-        style={styles.textInput}
-        ref={component => this._password = component}
-        placeholder={'Password'}
-        onChangeText={(text) => this.setState({ password: text })} 
-        secureTextEntry={true}
-        onFocus={this.clearPassword}
-        onSubmitEditing={this._userLogin}
-      />
-      </View>
-      {!!this.state.message && (
-        <Text
-          style={styles.stateMessage}>
-          {this.state.message}
-        </Text>
-      )}
-      <View style={{margin:7}} />
-      <View style={styles.forgotView}>
-        <Text style={styles.forgotText}>
-          Forgot username?
-        </Text>
-        <Text style={styles.forgotTextLine}>
-          |
-        </Text>
-        <Text style={styles.forgotText}>
-          Forgot password?
-        </Text>
-      </View>
-      <View style={styles.loginButtonView}>
-      <CustomButton
-          label={'LOGIN'}
-          buttonStyle={styles.buttonLogin}
-          textColor={styles.touchableLogin}
-          onPress={(e) => this.userLogin(e)}
-        />
+            <View style={styles.mainContainer}>
+              <View style={styles.loginView}>
+                <Text 
+                  style={styles.loginTitle}>
+                  LOGIN
+                </Text>
+              </View>
+            <View style={styles.inputView}>
+              <TextInput
+                placeholderTextColor='#fff'
+                style={styles.textInput}
+                ref={component => this._username = component}
+                placeholder={'Username'} 
+                onChangeText={(text) => this.setState({ username: text })} 
+                onFocus={this.clearUsername}
+                autoCapitalize={'none'}
+              />
+            </View>
+            <View style={styles.inputView}>
+              <TextInput 
+                placeholderTextColor='#fff'
+                style={styles.textInput}
+                ref={component => this._password = component}
+                placeholder={'Password'}
+                onChangeText={(text) => this.setState({ password: text })} 
+                secureTextEntry={true}
+                onFocus={this.clearPassword}
+                onSubmitEditing={this._userLogin}
+              />
+            </View>
+            <View style={{margin:7}} />
+            <View style={styles.forgotView}>
+              <Text style={styles.forgotText}>
+                Forgot username?
+              </Text>
+              <Text style={styles.forgotTextLine}>
+                |
+              </Text>
+              <Text style={styles.forgotText}>
+                Forgot password?
+              </Text>
+            </View>
+            <View style={styles.loginButtonView}>
+              <CustomButton
+                  label={'LOGIN'}
+                  buttonStyle={styles.buttonLogin}
+                  textColor={styles.touchableLogin}
+                  onPress={(e) => this.userLogin(e)}
+              />
+            </View>
           </View>
-
-      </View>
-    </KeyboardAvoidingView>
+      </KeyboardAvoidingView>
   </ImageBackground>
     );
   }

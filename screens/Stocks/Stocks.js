@@ -20,15 +20,15 @@ static navigationOptions = ({navigation}) => NavigatorStyle.getMainNavStyle('Sto
     this.state = {
         isConnected: true,
         textFromInput:'',
-        loading: true
+        loading: true,
       };
 }
 
 componentDidMount() {
     setTimeout(() => {
         this.setState({loading: false });
-      },3000)
-    this.timer = setInterval(()=> this.props.fetchAPI(), 3000);
+      },5000)
+    this.timer = setInterval(()=> this.props.fetchAPI(), (this.state.loading ? 5000 : 10000));
   }
   
   componentWillUnmount() {
@@ -40,8 +40,6 @@ componentDidMount() {
 
     render() {
     const { items, isFetching } = this.props.items;
-    // console.log('itemsss', items);
-
     if (this.state.loading) {
         if (!this.state.isConnected) {
           return <Offline />;
@@ -50,9 +48,7 @@ componentDidMount() {
         loading={this.state.loading} />;
       }
         return (
-                    <ImageBackground style={styles.imgBg}
-          resizeMode='cover' 
-          source={imgBgList}>
+            <ImageBackground style={styles.imgBg} resizeMode='cover' source={imgBgList}>
             <View style={styles.welcomeContainer}>
                 <Text style={styles.welcome}>
                    Welcome, <Text style={styles.welcomeUser}>{this.props.username} !</Text>

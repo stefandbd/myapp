@@ -2,6 +2,11 @@ import React from 'react';
 import {View, TouchableOpacity, Image, Platform} from 'react-native';
 import { HeaderBackButton } from 'react-navigation';
 import {menuicon} from '../../resources/constants';
+import { StackActions, NavigationActions } from 'react-navigation';
+const resetAction = StackActions.reset({
+  index: 0,
+  actions: [NavigationActions.navigate({routeName: 'Stocks'})],
+});
 
 class NavigatorStyle {
 
@@ -62,7 +67,7 @@ class NavigatorStyle {
                 marginLeft: Platform.OS === 'ios' ? 10 : 0,
             },
             headerRight:(<View></View>),
-            headerLeft: <HeaderBackButton onPress={() => navigation.navigate('Stocks')} />,
+            headerLeft: <HeaderBackButton tintColor={'white'} onPress={() => navigation.dispatch(resetAction)} />,
             headerTitleStyle:{
                 textAlign: 'center',
                 alignSelf:'center',
